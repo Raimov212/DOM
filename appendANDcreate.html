@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Yangi Element qo'shish va o'chirish</h1>
+    <button onclick="addButton()">Add</button>
+    <button onclick="removeButton()">Remove</button><br />
+    <script>
+      function addButton() {
+        let add = document.createElement("p");
+        add.innerHTML = "Add Button";
+        add.onclick = function () {
+          addButton();
+        };
+        document.body.appendChild(add);
+      }
+      function removeButton(){
+        document.body.removeChild(document.getElementsByTagName("p")[1])
+      }
+    </script>
+  </body>
+</html>

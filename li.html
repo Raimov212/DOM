@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Ichimliklar royhati</label>
+    <ol>
+      <li>Choy</li>
+      <li>Kofe</li>
+      <li>Fanta</li>
+      <li>Sharbat</li>
+      <li>Sut</li>
+    </ol>
+    <input type="text" placeholder="kiriting" id="drinkId" autofocus/>
+    <button onclick="setSelectedId()">bosing</button>
+    <p>
+      Tanlangan Ichimlik:
+      <label id="selected"></label>
+    </p>
+    <script>
+      function setSelectedId() {
+        let drinkId = document.getElementById("drinkId").value;
+        let drinkElements = document.getElementsByTagName("li");
+        console.log(drinkId);
+        if (drinkElements[drinkId - 1] != null)
+          document.getElementById("selected").innerHTML =
+            drinkElements[drinkId - 1].innerHTML ;
+        else
+          document.getElementById("selected").innerHTML =
+            "Tanlangan ichimlik yo'q";
+      }
+    </script>
+  </body>
+</html>

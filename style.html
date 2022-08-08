@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .colorText {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rangni ozgartirish</h1>
+    <h3>Hello World!</h3>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, commodi.
+    </p>
+    <button onclick="textColor()">Text</button>
+    <button onclick="paragrafColor()">Paragraf</button>
+    <script>
+      function textColor() {
+        let h1Element = document.getElementsByTagName("h1")[0];
+        if (h1Element != null) h1Element.setAttribute("class", "colorText");
+      }
+
+      function paragrafColor() {
+        document.getElementsByTagName("p")[0].style.color = "blue";
+      }
+    </script>
+  </body>
+</html>
